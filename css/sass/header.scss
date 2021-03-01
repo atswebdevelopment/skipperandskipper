@@ -1,0 +1,58 @@
+.header {
+  position: fixed;
+  top: 0px;
+  z-index: 9;
+  width: 100%;
+  padding-top:45px;
+  overflow: hidden;
+
+  @include media-query(phone, max){
+    margin-bottom: 30px;
+  }
+
+  &__logo{
+    display: block;
+    width: 202px;
+
+    .logo-a,
+    .logo-b {
+      fill: $white;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+
+    @include media-query(phone, max){
+      height: 80px;
+    }
+  }
+
+  svg {
+    width: 205px;
+
+    @include media-query(phone, max){
+      width: 134px;
+    }
+  }
+
+  &__navigation {
+    margin-left: auto;
+    display: flex;
+
+    li {
+      @include clearlist();
+      margin: 0;
+
+      a {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $white;
+        margin-left: 60px;
+        font-weight: 400;
+      }
+    }
+  }
+}

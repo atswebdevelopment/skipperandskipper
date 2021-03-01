@@ -1,0 +1,304 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  color: $white;
+
+  &__inner {
+    padding-top: 40vh;
+  }
+
+  &__content {
+    padding: 0 24px;
+  }
+
+  p {
+    max-width: 490px;
+  }
+}
+
+.intro {
+  text-align: center;
+  padding: 100px 0 80px;
+
+  svg {
+    width: 78px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+  }
+
+  li {
+    @include clearlist();
+
+    &:after {
+      content: 'I';
+      color: #05b9a5;
+      margin: 0 2px;
+      font-weight: 400;
+    }
+
+    &:last-child:after{
+      content: none;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-size: 14px;
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 130px;
+
+  &__inner {
+    max-width: 1340px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 123px;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      background: #f4f4f4;
+      z-index: -1;
+    }
+  }
+
+  &__video {
+    width: 1070px;
+    margin: 0 auto;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding:0 35px;
+      top: 35px;
+      left: -35px;
+      background: rgb(255,255,255);
+      background: linear-gradient(152deg, rgba(255,255,255,1) 0%, rgba(194,192,192,1) 100%);
+    }
+  }
+}
+
+.video {
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    img {
+      margin: 0;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  max-width: 1096px;
+  margin: 0 auto 60px;
+
+  .card {
+    background: $white;
+    flex: 1; 
+    margin: 0 12px;
+    padding: 40px 40px 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.15);
+    transform: scale(1);
+
+    &:hover .card__arrow {
+      text-decoration: none;
+      transform: scale(1.2);
+    }
+
+    &__link {
+      @include fill();
+    }
+
+    &__title {
+      font-family: $secondaryfont;
+      margin-bottom: 5px;
+    }
+
+    &__icon {
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    &__arrow {
+      transition: all 0.4s $ease;
+      height: 9px;
+    }
+  }
+}
+
+.brands {
+  p {
+    max-width: 550px;
+  }
+}
+
+.brandcards {
+  margin: 0 0 60px;
+  --widthA: calc(100vw - 1024px);
+  --widthB: calc(var(--widthA) / 2);
+  --widthC: calc(100vw - var(--widthB));
+  width: var(--widthC);
+  position: relative;
+
+  &__icon {
+    width: 96px;
+    position: absolute;
+    top: 230px;
+    left: -126px;
+
+    @include media-query(desktop, max){
+      display: none;
+    }
+  }
+
+  .brandcard {
+    width: calc(33.33% - 4px);
+    height: 556px;
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+
+    &__inner {
+      height: 100%;
+      display: flex;
+    }
+
+    &__content {
+      padding: 40px 40px 20px;
+      color: $white;
+      margin-top: auto;
+    }
+
+    &__link {
+      @include fill();
+    }
+
+    &__title {
+      font-family: $secondaryfont;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.workwithus {
+  text-align: center;
+  position: relative;
+  margin-bottom: 85px;
+
+  &__inner {
+    position: relative;
+    max-width: 878px;
+  }
+
+  &__icon{
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.03;
+  }
+
+  &__title {
+    font-family: $secondaryfont;
+    margin-bottom: 10px;
+    padding-top: 160px;
+  }
+
+  .size-12 {
+    max-width: 420px;
+    margin: 0 auto;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.work {
+  padding: 85px 0;
+  background: #293e4b;
+  color: $white;
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 20px;
+    right: -230px;
+    width: 800px;
+    opacity: 0.02;
+  }
+
+  p {
+    max-width: 550px;
+  }
+
+  .size-12 {
+    font-weight: 500;
+    margin-top: 70px;
+  }
+
+  .splide {
+    &__slide {
+      width: 510px;
+    }
+  }
+
+  .card {
+    margin-right: 14px;
+
+    &__image {
+      height: 318px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &__content {
+      background: $white;
+      width: 100%;
+      color: $black;
+      padding: 25px 37px 20px;
+      box-sizing: border-box;
+    }
+
+    &__name {
+      margin: 0 0 10px;
+      color:#0ba9b5;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    &__link {
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+  }
+}
