@@ -8,12 +8,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 0;
+
+    @include media-query(phone, max){
+      flex-direction: column;
+      padding: 40px 0;
+    }
   }
 
   &__logo {
     display: block;
     width: 290px;
+
+    @include media-query(phone, max){
+      width: 190px;
+      margin-bottom: 30px;
+    }
 
     svg {
       display: block;
@@ -29,6 +38,10 @@
     width: 460px;
     margin: 0;
     margin-left: auto;
+
+    @include media-query(phone, max){
+      width: 100%;
+    }
 
     li {
       @include clearlist();
@@ -114,6 +127,10 @@
       font-size: 12px;
       line-height: 1;
       color: #747474;
+
+      @include media-query(phone, max){
+        font-size: 10px;
+      }
     }
   }
 }
